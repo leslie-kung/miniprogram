@@ -1,1 +1,20 @@
 /* pages/about/about.wxss */
+.music{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  top: 40rpx;
+  right: 40rpx;
+  z-index: 9999;
+}
+
+/* css动画，控制图标一直旋转 */
+.on{
+  animation:rotating 2.5s linear infinite; 
+} 
+
+@keyframes rotating{
+from{transform:rotate(0)}
+to{transform:rotate(360deg)}
+}

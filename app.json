@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/note/note",
     "pages/about/about",
     "pages/logs/logs"
   ],
@@ -12,12 +13,20 @@
     "backgroundColor": "#6699ff"
   },
   "tabBar": {
+    "selectedColor": "#000033",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "主页",
         "iconPath": "assets/icon/i-home.png",
         "selectedIconPath": "assets/icon/i-home.png",
+        "selectedColor": "#000033"
+      },
+      {
+        "pagePath": "pages/note/note",
+        "text": "日记",
+        "iconPath": "assets/icon/note.png",
+        "selectedIconPath": "assets/icon/note.png",
         "selectedColor": "#000033"
       },
       {
@@ -30,5 +39,9 @@
     ]
   },
   "style": "v2",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
   "sitemapLocation": "sitemap.json"
 }

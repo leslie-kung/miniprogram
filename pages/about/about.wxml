@@ -1,2 +1,4 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class='music {{on? "on": ""}}'>
+    <image src='/assets/icon/music216.png' style='width: 60rpx;height: 60rpx;' bindtap='stop'></image>
+</view>

@@ -1,66 +1,31 @@
 // pages/about/about.js
 Page({
+  data:{
+    on: true
+  },
 
   /**
    * 页面的初始数据
    */
-  data: {
 
+  onReady(){
+    this.back = wx.getBackgroundAudioManager()
+    this.back.src = "http://other.web.rh01.sycdn.kuwo.cn/128b6e47ab1999ac841956a09b0ad866/5e8597b7/resource/n2/9/66/3331052726.mp3"
+    this.back.title = "告白气球"
+    this.back.play()
+    this.back.onEnded(()=>{
+      this.back.play();
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 停止暂停
+  stop(){
+    this.back.pause();
+    this.setData({on: !this.data.on})
+    if (this.data.on){
+      this.back.play()
+    }else{
+      this.back.pause()
+    }
   }
 })
